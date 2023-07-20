@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FitnessCoach</string>
+    <string name="user_name"> </string>
+    <string name="save">save</string>
+    <string name="name">name</string>
+
 </resources>
