@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "526228514085",
+    "project_id": "fitnesscoach-d8566",
+    "storage_bucket": "fitnesscoach-d8566.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526228514085:android:2562266548a516fed5a6cc",
+        "android_client_info": {
+          "package_name": "com.julian.fitnesscoach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDru8RPC3GhrDgJz3zcdLKlRI9Tlb3AksY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526228514085:android:ba77fe51fe5d0487d5a6cc",
+        "android_client_info": {
+          "package_name": "julian.scholler.fitnesscoach"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDru8RPC3GhrDgJz3zcdLKlRI9Tlb3AksY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

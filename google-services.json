@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "526228514085",
+    "project_id": "fitnesscoach-d8566",
+    "storage_bucket": "fitnesscoach-d8566.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526228514085:android:2562266548a516fed5a6cc",
+        "android_client_info": {
+          "package_name": "com.julian.fitnesscoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526228514085-1ejsp1ikrg7o5l1si70k278jndc3i4sd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.julian.fitnesscoach",
+            "certificate_hash": "4ce91ca4ea5365437cf1f1ae11e435179dc80ded"
+          }
+        },
+        {
+          "client_id": "526228514085-sbbshi3b068blp930v1idrasqdltgcej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDru8RPC3GhrDgJz3zcdLKlRI9Tlb3AksY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526228514085-sbbshi3b068blp930v1idrasqdltgcej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526228514085:android:ba77fe51fe5d0487d5a6cc",
+        "android_client_info": {
+          "package_name": "julian.scholler.fitnesscoach"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526228514085-sbbshi3b068blp930v1idrasqdltgcej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDru8RPC3GhrDgJz3zcdLKlRI9Tlb3AksY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526228514085-sbbshi3b068blp930v1idrasqdltgcej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
