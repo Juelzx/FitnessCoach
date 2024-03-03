@@ -2,6 +2,7 @@ package julian.scholler.fitnesscoach
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
@@ -18,6 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.auth.api.identity.Identity
 import dagger.hilt.android.AndroidEntryPoint
+import julian.scholler.fitnesscoach.googlesignin.presentation.profile.ProfileScreen
 import julian.scholler.fitnesscoach.googlesignin.presentation.signin.GoogleAuthUiClient
 import julian.scholler.fitnesscoach.googlesignin.presentation.signin.SignInScreen
 import julian.scholler.fitnesscoach.googlesignin.presentation.signin.SignInViewModel
@@ -34,6 +36,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             FitnessCoachTheme {
                 installSplashScreen()
@@ -44,6 +47,12 @@ class MainActivity : ComponentActivity() {
 
                         val viewModel: SignInViewModel by viewModels()
                         val state by viewModel.state.collectAsStateWithLifecycle()
+
+                        LaunchedEffect(key1 = Unit) {
+                            if (googleAuthUiClient.getSignedInUser() != null) {
+                                navController.navigate("profile")
+                            }
+                        }
 
                         val launcher = rememberLauncherForActivityResult(
                             contract = ActivityResultContracts.StartIntentSenderForResult(),
@@ -59,7 +68,16 @@ class MainActivity : ComponentActivity() {
                         )
 
                         LaunchedEffect(key1 = state.isSignInSuccessful) {
+                            if (state.isSignInSuccessful) {
+                                Toast.makeText(
+                                    applicationContext,
+                                    "Successful",
+                                    Toast.LENGTH_LONG
+                                ).show()
 
+                                navController.navigate("profile")
+                                viewModel.resetState()
+                            }
                         }
 
 
@@ -74,11 +92,30 @@ class MainActivity : ComponentActivity() {
                             }
                         })
                     }
+
+                    composable("profile") {
+                        ProfileScreen(userData = googleAuthUiClient.getSignedInUser(),
+                            onSignOut = {
+                                lifecycleScope.launch {
+                                    googleAuthUiClient.signOut()
+
+                                    Toast.makeText(
+                                        applicationContext,
+                                        "Signed out",
+                                        Toast.LENGTH_LONG
+                                    ).show()
+
+                                    navController.popBackStack()
+                                }
+                            })
+
+                    }
                 }
             }
         }
     }
 }
+
 
 
 
