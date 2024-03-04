@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.view.user
+package julian.scholler.fitnesscoach.userprofile.view
 
 import androidx.compose.runtime.Composable
 

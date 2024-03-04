@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.view.signin
+package julian.scholler.fitnesscoach.googlesignin.view
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box

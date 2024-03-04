@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.view.profile
+package julian.scholler.fitnesscoach.userprofile.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,7 +22,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import julian.scholler.fitnesscoach.repository.signin.UserData
+import julian.scholler.fitnesscoach.googlesignin.view.UserData
 
 @Composable
 fun ProfileScreen(

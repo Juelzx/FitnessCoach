@@ -1,8 +1,7 @@
-package julian.scholler.fitnesscoach.view.signin
+package julian.scholler.fitnesscoach.googlesignin.view
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import julian.scholler.fitnesscoach.repository.signin.SignInResult
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

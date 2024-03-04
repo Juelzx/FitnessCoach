@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.repository.signin
+package julian.scholler.fitnesscoach.googlesignin.view
 
 data class SignInResult(
     val data: UserData?,

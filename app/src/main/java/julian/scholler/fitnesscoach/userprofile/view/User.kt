@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.view.user.model
+package julian.scholler.fitnesscoach.userprofile.view
 
 data class User(
     val name: String,

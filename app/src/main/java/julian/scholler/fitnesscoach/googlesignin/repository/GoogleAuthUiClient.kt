@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.repository.signin
+package julian.scholler.fitnesscoach.googlesignin.repository
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,8 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.qualifiers.ApplicationContext
+import julian.scholler.fitnesscoach.googlesignin.view.SignInResult
+import julian.scholler.fitnesscoach.googlesignin.view.UserData
 import julian.scholler.fitnesscoach.utils.Constants
 import kotlinx.coroutines.tasks.await
 import java.util.concurrent.CancellationException

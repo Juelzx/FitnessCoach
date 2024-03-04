@@ -17,10 +17,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import julian.scholler.fitnesscoach.view.profile.ProfileScreen
-import julian.scholler.fitnesscoach.repository.signin.GoogleAuthUiClient
-import julian.scholler.fitnesscoach.view.signin.SignInScreen
-import julian.scholler.fitnesscoach.view.signin.SignInViewModel
+import julian.scholler.fitnesscoach.userprofile.view.ProfileScreen
+import julian.scholler.fitnesscoach.googlesignin.repository.GoogleAuthUiClient
+import julian.scholler.fitnesscoach.googlesignin.view.SignInScreen
+import julian.scholler.fitnesscoach.googlesignin.view.SignInViewModel
 import julian.scholler.fitnesscoach.ui.theme.FitnessCoachTheme
 import julian.scholler.fitnesscoach.utils.Preferences
 import kotlinx.coroutines.launch

@@ -8,7 +8,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import julian.scholler.fitnesscoach.repository.signin.GoogleAuthUiClient
+import julian.scholler.fitnesscoach.googlesignin.repository.GoogleAuthUiClient
 import julian.scholler.fitnesscoach.utils.Preferences
 import javax.inject.Singleton
 
