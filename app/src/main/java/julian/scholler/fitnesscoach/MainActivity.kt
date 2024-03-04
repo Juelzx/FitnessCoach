@@ -24,6 +24,7 @@ import julian.scholler.fitnesscoach.view.signin.SignInViewModel
 import julian.scholler.fitnesscoach.ui.theme.FitnessCoachTheme
 import julian.scholler.fitnesscoach.utils.Preferences
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -37,6 +38,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Timber.d("onCreateMain")
 
         setContent {
             FitnessCoachTheme {
