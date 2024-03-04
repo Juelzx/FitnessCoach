@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach
+package julian.scholler.fitnesscoach.utils
 
 class Constants {
     companion object {

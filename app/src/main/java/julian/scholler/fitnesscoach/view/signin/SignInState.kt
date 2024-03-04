@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.googlesignin.presentation.signin
+package julian.scholler.fitnesscoach.view.signin
 
 data class SignInState(
     val isSignInSuccessful: Boolean = false,

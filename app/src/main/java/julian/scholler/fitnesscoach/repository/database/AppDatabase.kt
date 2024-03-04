@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach
+package julian.scholler.fitnesscoach.repository.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

@@ -8,7 +8,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import julian.scholler.fitnesscoach.googlesignin.presentation.signin.GoogleAuthUiClient
+import julian.scholler.fitnesscoach.repository.signin.GoogleAuthUiClient
+import julian.scholler.fitnesscoach.utils.Preferences
 import javax.inject.Singleton
 
 @Module
@@ -25,5 +26,11 @@ object AppModule {
     @Provides
     fun provideGoogleAuthUiClient(@ApplicationContext context: Context, signInClient: SignInClient): GoogleAuthUiClient {
         return GoogleAuthUiClient(context, signInClient)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext context: Context): Preferences {
+        return Preferences(context)
     }
 }

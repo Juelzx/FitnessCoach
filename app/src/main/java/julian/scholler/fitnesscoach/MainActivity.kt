@@ -1,7 +1,6 @@
 package julian.scholler.fitnesscoach
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -17,19 +16,21 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.google.android.gms.auth.api.identity.Identity
 import dagger.hilt.android.AndroidEntryPoint
-import julian.scholler.fitnesscoach.googlesignin.presentation.profile.ProfileScreen
-import julian.scholler.fitnesscoach.googlesignin.presentation.signin.GoogleAuthUiClient
-import julian.scholler.fitnesscoach.googlesignin.presentation.signin.SignInScreen
-import julian.scholler.fitnesscoach.googlesignin.presentation.signin.SignInViewModel
+import julian.scholler.fitnesscoach.view.profile.ProfileScreen
+import julian.scholler.fitnesscoach.repository.signin.GoogleAuthUiClient
+import julian.scholler.fitnesscoach.view.signin.SignInScreen
+import julian.scholler.fitnesscoach.view.signin.SignInViewModel
 import julian.scholler.fitnesscoach.ui.theme.FitnessCoachTheme
+import julian.scholler.fitnesscoach.utils.Preferences
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var preferences: Preferences
 
     @Inject
     lateinit var googleAuthUiClient: GoogleAuthUiClient
@@ -48,6 +49,7 @@ class MainActivity : ComponentActivity() {
                         val viewModel: SignInViewModel by viewModels()
                         val state by viewModel.state.collectAsStateWithLifecycle()
 
+                        // Unit makes it launch once
                         LaunchedEffect(key1 = Unit) {
                             if (googleAuthUiClient.getSignedInUser() != null) {
                                 navController.navigate("profile")
@@ -107,7 +109,7 @@ class MainActivity : ComponentActivity() {
 
                                     navController.popBackStack()
                                 }
-                            })
+                            }, onUserDetails = { navController.navigate("user_configuration") })
 
                     }
                 }

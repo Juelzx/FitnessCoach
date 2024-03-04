@@ -1,4 +1,4 @@
-package julian.scholler.fitnesscoach.googlesignin.presentation.profile
+package julian.scholler.fitnesscoach.view.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,18 +22,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import julian.scholler.fitnesscoach.googlesignin.presentation.signin.UserData
+import julian.scholler.fitnesscoach.repository.signin.UserData
 
 @Composable
 fun ProfileScreen(
     userData: UserData?,
+    onUserDetails: () -> Unit,
     onSignOut: () -> Unit
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (userData?.profilePictureUrl != null) {
@@ -55,6 +56,12 @@ fun ProfileScreen(
                 fontSize = 36.sp,
                 fontWeight = FontWeight.Bold
             )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        Button(onClick = onUserDetails, modifier = Modifier.fillMaxWidth()) {
+            Text(text = "Start Configuration")
         }
 
         Spacer(modifier = Modifier.height(16.dp))
